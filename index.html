@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Variables Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/application.css">
+    <script defer src="js/application.js"></script>
+</head>
+
+<body>
+    <header>
+
+        <header>
+
+            <main>
+
+                <section class="section-about" id="about">
+                    <h2 class="about-h2">JavaScript Variables</h2>
+
+                    <article class="article-about">
+                        <p>What is a Variable? A variable is a container in which we can store values for later retrieval. Imagine a box that can hold any type of data: a number, a string, etc. We take some data that we want to store, place it inside the
+                            box, and hand the box off to the JavaScript engine, which stores it in memory. All done! Our data is safely cached until we need to access it again. But wait! When we ask for the data back, how will the JavaScript engine know
+                            which box to retrieve? We need to assign a name to our variable — a label for our box — so that we can use the variable lookup expression to tell the engine exactly which piece of stored data we want to access.</p>
+
+                        <p>To declare the variable, we use either the let or const reserved word. (And, in fact, there's a third option as well: var. We'll talk about when to use each a bit later in this lesson. For now, just know that when you see const,
+                            let, or var, those are reserved words that are used to declare a variable.) Let's say I needed to declare and define multiple variables. It feels like a lot to have to repeat let or const over and over again. To alleviate this
+                            pain, JavaScript allows us to initialize multiple variables in a single line of code. The variables must be separated with commas, and the entire line must end with a semicolon.</p>
+
+                        <p>Retrieving and Changing the Value of Variables Say we've declared a variable pi and set its value, To retrieve the value of pi, we use the variable lookup expression, i.e., we simply type in its name, If we want to change (reassign)
+                            that value, we use the assignment expression.</p>
+
+                        <p>Identify When to Use const, let, and var for Declaring Variables In the past, var was the only option available in JavaScript for declaring variables. Then, in 2015, the language underwent a major revision that, among many other
+                            changes, added two new options: const and let. > NOTE: Delving into the history of JavaScript and the many changes and > improvements that were made to it in 2015 is outside the scope of this lesson. > However, as you're learning
+                            to code in JavaScript you may see references to > ECMAScript 2015, ES2015, or ES6. These terms are interchangeable and > refer to that major revision. (ECMAScript is the "offical" name of > JavaScript.) There are some resources
+                            listed at the end of this lesson if > you're interested in learning more about ES2015 and the history of > JavaScript. The addition of const and let was in response to significant problems that the use of var can cause. In
+                            particular, it can create scope issues (which is a whole other topic that you'll learn about later) that lead to unpredictable and difficult to diagnose bugs in your code. You will likely see var used a lot in legacy code and
+                            older StackOverflow posts, so it's important to be familiar with it. However, there is no good reason to use var to declare variables in your own code, and good reasons not to. let - The main advantage of using let for declaring
+                            a variable is that, unlike var, it will throw an error if you try to declare the same variable a second time. Why is this a good thing? Well, you can imagine how easy it could be, especially in a lengthy program, to accidentally
+                            reuse a variable name. Doing so can cause unpredictable behavior because the value associated with the variable in one part of the program may be changed by code in a different part of the program. These types of problems can
+                            be very difficult to track down and debug. Using let to declare your variables will reduce the likelihood of introducing such errors into your code. While we can't redeclare a variable that is declared using let, we can still
+                            reassign its value.</p>
+
+                        <p>const - The const reserved word should be your go-to option for declaring variables in JavaScript. When you declare a variable with const, not only can it not be redeclared but it also cannot be reassigned. When you (or another
+                            developer) sees that pi has been declared with const, you immediately know that the variable points to the same value every other time it's referenced in the program. For variables declared with let (or var), you cannot be
+                            so sure and will have to keep track of how those variables change throughout the program. The extra information provided by const is valuable, and it comes at no extra cost to you! Just use const whenever possible and reap
+                            the benefits. NOTE: With let, it's possible to declare a variable without assigning a value... However, because const doesn't allow reassignment after the variable is initialized, we must assign a value right away.
+                        </p>
+
+                        <p>As your JavaScript powers increase with experience, you'll develop a more nuanced understanding of what to use where. However, for now, this is a good rule of thumb: Use var... never. Use let... when you know the value of a variable
+                            will change. For example, a counter variable that starts at 0 and is subsequently incremented to 1, 2, 3, and so on. In the lessons on looping and iteration in JavaScript, let will have its moment in the spotlight. Use const...
+                            for every other variable. Best practice is to always declare variables with const and then, if you later realize that the value has to change over the course of your program, circle back to change it to let.</p>
+                    </article>
+                    <br>
+                    <br>
+                    <p class="subtitle-p subtitle-p--intro">By Luke Joseph, October 2 2021</p>
+            </main>
+
+</body>
+
+</html>
